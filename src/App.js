@@ -1,22 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Greetings from './components/pure/greetings';
+import GreetingsF from './components/pure/greetingsF';
+import ComponenteA from './components/pure/componenteA';
 
 function App() {
+  const miContacto = {
+    firstName: "Juan",
+    lastName: "Lasso",
+    email: "miemail.com",
+    isConnected: false,
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/*       Componete de Clase:     */}
+        {/*<Greetings name = "Juan"></Greetings>*/}
+
+        {/*       Componete Funcional:    */}
+        {/* <GreetingsF name = "Juan"></GreetingsF> */}
+
+        {/*       Componete Lista de Tareas:    */}
+        {/* <TaskListComponent></TaskListComponent> */}
+
+        {/*       Componete Contactos:      */}
+        <ComponenteA contact={miContacto}/>
       </header>
     </div>
   );
